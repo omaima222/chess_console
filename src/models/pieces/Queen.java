@@ -1,19 +1,19 @@
 package models.pieces;
 
 import enums.Side;
-import enums.pieceName;
 import models.Piece;
+import  enums.pieceName;
 
-public class King extends Piece{
+public class Queen extends Piece {
     private String symbol;
-    private final int points = 0;
-    public King(Side side) {
+    private final int points = 9;
+    public Queen(Side side) {
         super(side);
     }
     public int getPoints() {
         return points;
     }
     public String getSymbol(){
-        return getSide().equals(Side.Black) ? " ♔ " : " ♚ ";
+        return getSide().equals(Side.Black) ? " ♕ " : " ♛ ";
     }
 }

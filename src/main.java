@@ -1,9 +1,15 @@
 
 import models.Board;
+import models.pieces.Rook;
+import services.BoardService;
+
+import java.util.Scanner;
 
 
 public class main {
     public static void main(String[] args) {
-        new Board().initialBoard(new Board().getLines());
+        Scanner scanner = new Scanner(System.in);
+
+        new BoardService().displayBoard();
     }
 }

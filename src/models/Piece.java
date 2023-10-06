@@ -1,19 +1,20 @@
 package models;
 
+import enums.Side;
 import enums.pieceName;
 
-public class Piece {
-     private pieceName name;
-     private String symbol;
-     private int points;
-     public Piece(pieceName name,String symbol,int points){
-          this.name = name;
-          this.symbol = symbol;
-          this.points = points;
+public abstract class Piece {
+
+     private Side side;
+     private Square square;
+
+     public Piece(Side side){
+          this.side = side;
      }
 
-     public boolean move(){
-          return true;
-     }
+     public abstract String getSymbol();
 
+     public Side getSide() {
+          return side;
+     }
 }
